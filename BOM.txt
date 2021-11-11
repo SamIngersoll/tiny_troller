@@ -1,0 +1,23 @@
+
+MODULES
+	DONE - Micro
+		DONE - DECOUPLING
+		DONE - RESONATOR
+	DONE - CAN
+		DONE - CAN passives
+		DONE - PADS
+	3V REG
+	5V REG
+	H-BRIDGE
+	ENCODER
+
+
+TODO
+	Redo layout of top board.
+		Micro should probably move "down" on the board.
+		Pads should probably move to the "top" of the board. 
+		CAN Transciever should be nearer to its pins (righthand side of the board?)
+
+
+STM32G431    -    UFQFPN32 (5 x 5 mm)
+
