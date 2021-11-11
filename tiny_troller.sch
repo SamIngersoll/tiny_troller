@@ -272,8 +272,6 @@ Text GLabel 1300 4050 0    50   Input ~ 0
 ENC_CS
 Text GLabel 2800 7300 2    50   Input ~ 0
 STAT_LED
-Text Notes 5950 -550 0    157  Italic 31
-TODO
 Text GLabel 1850 1850 0    50   Input ~ 0
 LBUS
 Wire Wire Line
@@ -323,8 +321,6 @@ F 3 "" H 2500 6500 50  0001 C CNN
 	1    2500 6500
 	0    1    1    0   
 $EndComp
-Text Notes 6000 -400 0    50   ~ 0
-drv fault and drv iprop need pullups
 Text GLabel 7350 4000 2    50   Input ~ 0
 ENC_MGH
 Text GLabel 6650 4700 3    50   Input ~ 0
@@ -497,7 +493,7 @@ Wire Wire Line
 	10000 1450 10000 1550
 Wire Wire Line
 	10000 1250 10000 1100
-Text GLabel 7250 1850 0    50   Input ~ 0
+Text GLabel 6850 1850 0    50   Input ~ 0
 LBUS
 $Comp
 L power:GND #PWR0105
@@ -524,15 +520,15 @@ $EndComp
 $Comp
 L Device:D_Small D2
 U 1 1 615AA4A8
-P 7400 1550
-F 0 "D2" H 7400 1450 50  0000 C CNN
-F 1 "D_Small" H 7400 1350 50  0000 C CNN
-F 2 "Diode_SMD:D_0402_1005Metric" V 7400 1550 50  0001 C CNN
-F 3 "~" V 7400 1550 50  0001 C CNN
-	1    7400 1550
+P 7050 1550
+F 0 "D2" H 7050 1450 50  0000 C CNN
+F 1 "D_Small" H 7050 1350 50  0000 C CNN
+F 2 "Diode_SMD:D_0402_1005Metric" V 7050 1550 50  0001 C CNN
+F 3 "~" V 7050 1550 50  0001 C CNN
+	1    7050 1550
 	-1   0    0    1   
 $EndComp
-Text GLabel 7200 1550 0    50   Input ~ 0
+Text GLabel 6800 1550 0    50   Input ~ 0
 PWR
 Wire Wire Line
 	7700 1350 7700 1550
@@ -569,9 +565,6 @@ Wire Wire Line
 	7700 1150 7700 1000
 Wire Wire Line
 	8000 1150 8000 1000
-Wire Wire Line
-	7500 1550 7700 1550
-Connection ~ 7700 1550
 $Comp
 L Device:C_Small C4
 U 1 1 615C8E0F
@@ -584,7 +577,7 @@ F 3 "~" H 7500 2100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7250 1850 7500 1850
+	6850 1850 7500 1850
 Wire Wire Line
 	7500 1850 7500 2000
 Connection ~ 7500 1850
@@ -662,20 +655,20 @@ LIN_RX
 $Comp
 L Device:D_Small D3
 U 1 1 61617327
-P 7650 1650
-F 0 "D3" H 7850 1750 50  0000 C CNN
-F 1 "D_Small" H 7650 1750 50  0000 C CNN
-F 2 "Diode_SMD:D_0402_1005Metric" V 7650 1650 50  0001 C CNN
-F 3 "~" V 7650 1650 50  0001 C CNN
-	1    7650 1650
+P 7250 1650
+F 0 "D3" H 7450 1750 50  0000 C CNN
+F 1 "D_Small" H 7250 1750 50  0000 C CNN
+F 2 "Diode_SMD:D_0402_1005Metric" V 7250 1650 50  0001 C CNN
+F 3 "~" V 7250 1650 50  0001 C CNN
+	1    7250 1650
 	-1   0    0    1   
 $EndComp
-Text GLabel 7300 1650 0    50   Input ~ 0
+Text GLabel 6900 1650 0    50   Input ~ 0
 LIN_CS
 Wire Wire Line
-	7300 1650 7550 1650
+	6900 1650 7150 1650
 Wire Wire Line
-	7750 1650 8300 1650
+	7350 1650 8300 1650
 $Comp
 L Device:C_Small C6
 U 1 1 61637AA0
@@ -699,7 +692,7 @@ F 3 "~" H 8000 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 1550 7300 1550
+	6800 1550 6950 1550
 Text Notes 5700 2150 0    50   ~ 0
 PADS ARE WAY TOO FUCKING BIG
 $Comp
@@ -946,8 +939,24 @@ F 3 "~" H 7900 2100 50  0001 C CNN
 	1    7900 2100
 	0    1    1    0   
 $EndComp
-Text Notes 8250 2550 0    50   ~ 0
-THIS IS WRONG, THERE NEEDS TO BE A RESISTOR between VBAT and VBB (PAGE 12)
 Text Notes 10400 2100 0    50   ~ 0
 this resistor may be optional,\nget a 0 Ohm resistor
+$Comp
+L Device:R_Small_US R5
+U 1 1 618DD948
+P 7450 1550
+F 0 "R5" V 7350 1550 50  0000 C CNN
+F 1 "R_Small" V 7250 1550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7450 1550 50  0001 C CNN
+F 3 "~" H 7450 1550 50  0001 C CNN
+	1    7450 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7550 1550 7700 1550
+Connection ~ 7700 1550
+Wire Wire Line
+	7350 1550 7150 1550
+Text Notes 6300 1050 0    50   Italic 10
+R5 is not in hardware v0.0\nR5 is new in v0.1
 $EndSCHEMATC
