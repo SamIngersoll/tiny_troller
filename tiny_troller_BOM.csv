@@ -6,21 +6,17 @@ Qty,Designator,PN,Value,Description,Comment
 ,,,,,
 2,"c1, c6",GRJ155R60J106ME11D,10 uF,0402 capacitor,"CReg for voltage regulator, has ESR and value constraints for regulator stability. "
 3,"c2, c3, c9",CC0402JRX7R7BB104,100 nF,0402 capacitor,
- ,c4,AC0402KRX7R7BB221,220 pF,403 capacitor,
+1,c4,AC0402KRX7R7BB221,220 pF,403 capacitor,
 1,c5,04026D226MAT2A,22 uF,404 capacitor,CBat for voltage regulator. Should be as big as possible. Rated for battery voltage.
-2,"c7, c8",GMC04X7R105M10NT,1 uF,405 capacitor,Rated for battery voltage
+2,"c7, c8",TMK105AC6105KV-F,1 uF,405 capacitor,Rated for battery voltage
 ,,,,,
 1,d1,EAST1005BA0,-,0402 blue LED,status led
 2,"d2, d3","CLS10F40,L3F",-,0402 diode,40V
 1,d4,CPDQC24VEU-HF,-,0402 diode,40V Zener diode
-1,d5,CPDQR24V-HF,-,0402 diode,TVS diode
+1,d5,XGD10402KR,-,0402 diode,TVS diode
 ,,,,,
 1,r1,CRCW04021K50FKEDHP,1.5 kOhm,0402 resistor,current limiting resistor for LED
 2,"r2, r4",SG73P1EWTTP1002F,10 kOhm,0402 resistor,
 1,r3,ERJ-2BWFR082X,70 mOhm,0402 sense resistor,"motor drive current sense resistor, needs high power rating"
 1,r5,SR731ERTTP2R00F,2 Ohm,0402 power resistor,"voltage regulator transient protection resistor, needs high power rating"
 3,r_,5112,0 Ohm,0402 resistor,"some optional parts in circuitry (R2, D3) that could be replaced with 0 Ohm resistors"
-,,,,,
-just for v00,,,,,
-1,c4,,220p,,"Forgot to put in design, need to bodge through hole components to get v00 to work"
-1,r5,,2 Ohm,,
